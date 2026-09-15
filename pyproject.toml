@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phytooncohub"
+version = "0.1.0"
+description = "Phytochemical ranking toolkit for cancer protein targets, ADMET flags, and pathway mapping"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "PhytoOncoHub contributors"}]
+keywords = ["phytochemicals", "cancer", "network-pharmacology", "admet", "bioinformatics"]
+dependencies = []
+
+[project.optional-dependencies]
+rdkit = ["rdkit"]
+dev = ["pytest"]
+
+[project.scripts]
+phytooncohub = "phytooncohub.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["phytooncohub*"]
